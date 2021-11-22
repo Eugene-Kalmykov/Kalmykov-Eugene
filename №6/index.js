@@ -18,10 +18,7 @@ function animalsFabric(animals = animal) {
   if (!Array.isArray(animals)) {
     throw new Error("неверный тип входных данных");
   }
-  let objectAnimals = animals.map(function (item) {
-    let value = new Animal(item);
-    return value;
-  });
+  let objectAnimals = animals.map((item) => new Animal(item));
   return objectAnimals;
 }
 console.log(animalsFabric([{ name: "cat", color: "red", age: "5" }]));
