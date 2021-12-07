@@ -44,7 +44,6 @@ function getVowels(str) {
           pos = strng.indexOf(letter, pos + 1);
         }
       });
-      
       return `count("${letters}") = ${value}`;
     },
   };

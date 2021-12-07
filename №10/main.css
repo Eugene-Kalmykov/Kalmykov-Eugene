@@ -1,0 +1,12 @@
+
+li {
+    transition: 0.1s all;
+} 
+li:hover { 
+    border: gray solid 1px inherit;
+    border-radius: 3px;
+}
+.action {
+    background-color: greenyellow;
+    border-radius: 3px;
+}
