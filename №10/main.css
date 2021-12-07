@@ -1,9 +1,10 @@
 
 li {
+    width: fit-content;
     transition: 0.1s all;
 } 
 li:hover { 
-    border: gray solid 1px inherit;
+    border: gray solid 1px;
     border-radius: 3px;
 }
 .action {
