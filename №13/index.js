@@ -26,19 +26,21 @@ header.addEventListener("click", function (event) {
   buttonUser.className = "dis";
   buttonPhoneNum.className = "dis";
 
-  if (event.target.id === "company") {
-    const promise = fetch(urlCompany);
-    render(promise);
-    buttonCompany.className = "activ";
-  }
-  if (event.target.id === "user") {
-    const promise = fetch(urlUser);
-    render(promise);
-    buttonUser.className = "activ";
-  }
-  if (event.target.id === "phone") {
-    const promise = fetch(urlPhoneNum);
-    render(promise);
-    buttonPhoneNum.className = "activ";
-  }
+  const buttonDataObj = {
+    company: {
+      url: urlCompany,
+      element: buttonCompany,
+    },
+    user: {
+      url: urlUser,
+      element: buttonUser,
+    },
+    phone: {
+      url: urlPhoneNum,
+      element: buttonPhoneNum,
+    },
+  };
+  const promise = fetch(buttonDataObj[event.target.id].url);
+  render(promise);
+  buttonDataObj[event.target.id].element.className = "activ";
 });
